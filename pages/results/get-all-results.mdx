@@ -1,0 +1,48 @@
+# Get all results
+
+```http copy filename="GET"
+http://localhost:3000/api/v1/results
+```
+
+Provides information about the results of games already played. By making a GET request to this URL, you will get a list of results along with your basic information.
+
+## Parameters
+
+| Parameter | Default | Description          |
+| :-------- | :-----: | :------------------- |
+| `page`    |    1    | Current page number. |
+
+## Request example
+
+```txt copy filename="GET"
+http://localhost:3000/api/v1/results?page=1
+```
+
+## Response
+
+```json copy
+{
+  "status": "string",
+  "size": 0,
+  "data": [
+    {
+      "id": "string",
+      "teams": [
+        {
+          "name": "string",
+          "score": "string",
+          "country": "string",
+          "won": true
+        }
+      ],
+      "status": "string",
+      "ago": "string",
+      "event": "string",
+      "tournament": "string",
+      "img": "string"
+    }
+  ]
+}
+```
+
+That way, you will be able to obtain information about the results.

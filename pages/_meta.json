@@ -1,0 +1,21 @@
+{
+  "index": "Introduction",
+  "notes": "Release notes",
+  "teams": "Teams",
+  "players": "Players",
+  "events": "Events",
+  "matches": "Matches",
+  "results": "Results",
+  "contact": {
+    "title": "Contact ↗",
+    "type": "page",
+    "href": "https://n0step.xyz",
+    "newWindow": true
+  },
+  "ko-fi":{
+    "title": "Donate ↗",
+    "type": "page",
+    "href": "https://paypal.me/krushna06",
+    "newWindow": true
+  }
+}

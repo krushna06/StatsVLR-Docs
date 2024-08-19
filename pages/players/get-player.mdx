@@ -1,0 +1,81 @@
+# Get player info
+
+```txt copy filename="GET"
+http://localhost:3000/api/v1/players/{playerid}
+```
+
+Provides information about a specific Valorant Esports player. By making a GET request to this URL with the specified `playerid`, you will get details about their personal information, team they belong to, and links to their social networks.
+
+## Parameters
+
+| Parameter  | Required | Description                 |
+| :--------- | :------: | :-------------------------- |
+| `playerid` |    ✅    | ID of the player to consult |
+
+## Response
+
+```json copy
+{
+  "status": "string",
+  "data": {
+    "info": {
+      "id": "string",
+      "url": "string",
+      "img": "string",
+      "user": "string",
+      "name": "string",
+      "country": "string",
+      "flag": "string"
+    },
+    "team": {
+      "id": "string",
+      "url": "string",
+      "name": "string",
+      "logo": "string",
+      "joined": "string"
+    },
+    "results": [
+      {
+        "match": {
+          "id": "string",
+          "url": "string"
+        },
+        "event": {
+          "name": "string",
+          "logo": "string"
+        },
+        "teams": [
+          {
+            "name": "string",
+            "tag": "string",
+            "logo": "string"
+          }
+        ]
+      }
+    ],
+    "pastTeams": [
+      {
+        "id": "string",
+        "url": "string",
+        "name": "string",
+        "logo": "string",
+        "info": "string"
+      }
+    ],
+    "socials": {
+      "twitter": "string",
+      "twitter_url": "string",
+      "twitch": "string",
+      "twitch_url": "string"
+    }
+  }
+}
+```
+
+You will be able to get detailed information about a specific player by using the player ID in the request URL.
+
+## Playground
+
+import Player from "../../components/Player";
+
+<Player />

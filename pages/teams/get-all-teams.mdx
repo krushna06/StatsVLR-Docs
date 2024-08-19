@@ -1,0 +1,49 @@
+# Get all teams
+
+```http copy filename="GET"
+http://localhost:3000/api/v1/teams
+```
+
+Provides information about all teams. By making a GET request to this URL, you will get a list of teams along with their basic information.
+
+## Parameters
+
+| Parameter | Default | Description                                                                                                                                  |
+| :-------- | :-----: | :------------------------------------------------------------------------------------------------------------------------------------------- |
+| `page`    |    1    | Current page number.                                                                                                                         |
+| `limit`   |   10    | Limit of results per page. You can also use `all` to get all teams.                                                                          |
+| `region`  |   all   | Specific region. `na` `eu` `br` `ap` `kr` `ch` `jp` `lan` `las` `oce` `mn` `gc` or use `all` to get a summary of the teams from each region. |
+
+## Request example
+
+```txt copy filename="GET"
+http://localhost:3000/api/v1/teams?region=lan
+```
+
+## Response
+
+```json copy
+{
+  "status": "string",
+  "region": "string",
+  "size": 0,
+  "pagination": {
+    "page": 0,
+    "limit": 0,
+    "totalElements": 0,
+    "totalPages": 0,
+    "hasNextPage": true
+  },
+  "data": [
+    {
+      "id": "string",
+      "url": "string",
+      "name": "string",
+      "img": "string",
+      "country": "string"
+    }
+  ]
+}
+```
+
+That way, you will be able to obtain information about the teams that have played recently. Remember that this API also provides pagination information to handle large data sets.
