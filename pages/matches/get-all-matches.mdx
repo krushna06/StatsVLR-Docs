@@ -1,0 +1,35 @@
+# Get all matches
+
+```http copy filename="GET"
+http://localhost:3000/api/v1/matches
+```
+
+Provides information about upcoming matches or matches being played. By making a GET request to this URL, you will get a list of matches along with their basic information.
+
+## Response
+
+```json copy
+{
+  "status": "string",
+  "size": 0,
+  "data": [
+    {
+      "id": "string",
+      "teams": [
+        {
+          "name": "string",
+          "country": "string",
+          "score": "string"
+        }
+      ],
+      "status": "string",
+      "event": "string",
+      "tournament": "string",
+      "img": "string",
+      "in": "string"
+    }
+  ]
+}
+```
+
+That way, you will be able to obtain information about the matches.

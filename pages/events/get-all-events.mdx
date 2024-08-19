@@ -1,0 +1,43 @@
+# Get all events
+
+```http copy filename="GET"
+http://localhost:3000/api/v1/events
+```
+
+Provides information about all events. By making a GET request to this URL, you will get a list of events along with their basic information.
+
+## Parameters
+
+| Parameter | Default | Description                                                                                                     |
+| :-------- | :-----: | :-------------------------------------------------------------------------------------------------------------- |
+| `page`    |    1    | Current page number.                                                                                            |
+| `status`  |   all   | Filter events by their status, `ongoing` `upcoming` `completed`. You can also use `all` to not use this filter. |
+| `region`  |   all   | Specific region. `na` `eu` `br` `ap` `kr` `ch` `jp` `lan` `las` `oce` `mn` `gc` or use `all`.                   |
+
+## Request example
+
+```txt copy filename="GET"
+http://localhost:3000/api/v1/events?page=1&status=upcoming&region=all
+```
+
+## Response
+
+```json copy
+{
+  "status": "string",
+  "size": 0,
+  "data": [
+    {
+      "id": "string",
+      "name": "string",
+      "status": "string",
+      "prizepool": "string",
+      "dates": "string",
+      "country": "string",
+      "img": "string"
+    }
+  ]
+}
+```
+
+That way, you will be able to obtain information about the events.

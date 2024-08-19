@@ -1,0 +1,56 @@
+# Get all players
+
+```http copy filename="GET"
+http://localhost:3000/api/v1/players
+```
+
+Provides information about Valorant players. By making a GET request to this URL, you will get a list of players along with details such as their ID, name, team, country, and pagination details.
+
+## Parameters
+
+| Parameter      | Default | Description                                                           |
+| :------------- | :-----: | :-------------------------------------------------------------------- |
+| `page`         |    1    | Current page number.                                                  |
+| `limit`        |   10    | Limit of results per page. You can also use `all` to get all players. |
+| `event_series` |   all   | Event series. `event group id`                                        |
+| `event`        |   all   | Specific event. `event id`                                            |
+| `region`       |   all   | Specific region. `na` `eu` `ap` `jp` `sa` `oce` `mn` `gc`             |
+| `country`      |   all   | Specific country. `co` `es` ...                                       |
+| `minrounds`    |   200   | Minimum number of rounds played.                                      |
+| `minrating`    |  1550   | Minimum rating.                                                       |
+| `agent`        |   all   | Specific agent. `astra` `jett` ...                                    |
+| `map`          |   all   | Specific map. `map id`                                                |
+| `timespan`     |   60d   | Specific time period. `30d` `60d` `90d` `all`                         |
+
+## Request example
+
+```txt copy filename="GET"
+http://localhost:3000/api/v1/players?limit=3&country=co
+```
+
+## Response
+
+```json copy
+{
+  "status": "string",
+  "size": 0,
+  "pagination": {
+    "page": 0,
+    "limit": 0,
+    "totalElements": 0,
+    "totalPages": 0,
+    "hasNextPage": true
+  },
+  "data": [
+    {
+      "url": "string",
+      "user": "string",
+      "name": "string",
+      "img": "string",
+      "country": "string"
+    }
+  ]
+}
+```
+
+You will be able to get detailed information about the players. Remember that this API also provides paging information to handle large data sets.
