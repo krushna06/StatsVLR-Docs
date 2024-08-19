@@ -11,7 +11,7 @@ const logo = (
     }}
   >
     <img src="https://avatars.githubusercontent.com/u/168160465?s=200&v=4" width={64} height={64} />
-    <span>Valorant Esports API v1.0.0</span>
+    <span>StatsVLR v1.0.0</span>
   </div>
 );
 
@@ -29,11 +29,11 @@ const config: DocsThemeConfig = {
         <meta httpEquiv="Content-Language" content="en" />
         <meta
           name="description"
-          content="The Valorant Esports API is a user-friendly tool that allows you to extract data from the website vlr.gg. With this API, you can easily access real-time information about Valorant esports, including match results, player profiles, team details, and more. Stay informed about the latest events and statistics in the world of Valorant esports using this convenient and reliable API."
+          content="This Valorant Esports API is a user-friendly tool that allows you to extract data from the website vlr.gg. With this API, you can easily access real-time information about Valorant esports, including match results, player profiles, team details, and more. Stay informed about the latest events and statistics in the world of Valorant esports using this convenient and reliable API."
         />
         <meta
           name="og:description"
-          content="The Valorant Esports API is a user-friendly tool that allows you to extract data from the website vlr.gg. With this API, you can easily access real-time information about Valorant esports, including match results, player profiles, team details, and more. Stay informed about the latest events and statistics in the world of Valorant esports using this convenient and reliable API."
+          content="This Valorant Esports API is a user-friendly tool that allows you to extract data from the website vlr.gg. With this API, you can easily access real-time information about Valorant esports, including match results, player profiles, team details, and more. Stay informed about the latest events and statistics in the world of Valorant esports using this convenient and reliable API."
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={socialCard} />
@@ -42,13 +42,13 @@ const config: DocsThemeConfig = {
         <meta
           name="og:title"
           content={
-            title ? title + " – Valorant Esports API" : "Valorant Esports API"
+            title ? title + " – StatsVLR API" : "StatsVLR API"
           }
         />
         <meta name="og:image" content={socialCard} />
         <meta
           name="apple-mobile-web-app-title"
-          content="Valorant Esports API"
+          content="StatsVLR API"
         />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="icon" href="/favicon.png" type="image/png" />
@@ -91,7 +91,7 @@ const config: DocsThemeConfig = {
   },
   useNextSeoProps() {
     return {
-      titleTemplate: "%s | Valorant Esports API",
+      titleTemplate: "%s | StatsVLR API",
     };
   },
 };

@@ -1,5 +1,3 @@
-Here is the consolidated v1.0.0 with all the features moved:
-
 # What's new?
 
 ## v1.0.0
