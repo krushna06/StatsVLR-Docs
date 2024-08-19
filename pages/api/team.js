@@ -1,7 +1,7 @@
 export default async function handler(req, res) {
   const { id } = JSON.parse(req.body);
 
-  const url = `http://localhost:3000/api/v1/teams/${id}`;
+  const url = `https://statsvlr.n0step.xyz/api/v1/teams/${id}`;
 
   const options = {
     method: "GET",

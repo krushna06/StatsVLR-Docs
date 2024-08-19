@@ -44,7 +44,7 @@ export default function Team() {
           <form onSubmit={handleSubmit}>
             <div className={styles.searchbar}>
               <div className={styles.url}>
-                http://localhost:3000/api/v1/teams/
+                https://statsvlr.n0step.xyz/api/v1/teams/
                 <input
                   className={styles.input}
                   type="number"
